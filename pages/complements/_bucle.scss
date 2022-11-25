@@ -1,0 +1,7 @@
+/* Bucle Paddings */
+
+@for $pad from 1 through 10 {
+  .padding-#{$pad} {
+    padding: 1rem * $pad;
+  }
+}

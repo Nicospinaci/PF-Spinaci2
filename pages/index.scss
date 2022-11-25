@@ -1,0 +1,346 @@
+/* Mobile */
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+.imagenportada {
+  @extend body;
+}
+.main_maspedidos {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 15px 0px;
+  padding: 1rem;
+
+  &_title h1 {
+    margin: 0 auto;
+    font-size: 18px;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  &_cam {
+    width: 80%;
+  }
+  &_box {
+    ul {
+      font-size: 13px;
+      @include fsize(sm) {
+        font-size: 14px;
+      }
+      @include fsize(md) {
+        font-size: 16px;
+      }
+      @include fsize(lg) {
+        font-size: 16px;
+      }
+    }
+    background-color: white;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+    @include box-shadow(1);
+  }
+}
+.masproductos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+}
+.arribos_oferta {
+  padding: 1rem;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+}
+.oferta_del_mes {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background: rgb(64, 50, 49);
+  background: linear-gradient(
+    0deg,
+    rgba(64, 50, 49, 1) 16%,
+    rgba(126, 75, 77, 1) 54%
+  );
+}
+.nuevos_arribos {
+  display: grid;
+  grid-template-rows: 1fr 0,5fr;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+  background: rgb(64, 50, 49);
+  background: linear-gradient(
+    0deg,
+    rgba(64, 50, 49, 1) 16%,
+    rgba(126, 75, 77, 1) 54%
+  );
+}
+.card-title {
+  font-size: 30px;
+  @include fsize(sm) {
+    font-size: 34px;
+  }
+  @include fsize(md) {
+    font-size: 38px;
+  }
+  @include fsize(lg) {
+    font-size: 50px;
+  }
+}
+.card-title-promo {
+  font-size: 16px;
+  @include fsize(sm) {
+    font-size: 20px;
+  }
+  @include fsize(md) {
+    font-size: 24px;
+  }
+  @include fsize(lg) {
+    font-size: 50px;
+  }
+
+}
+.ver_mas {
+  font-size: 16px;
+  @include fsize(sm) {
+    font-size: 16px;
+  }
+  @include fsize(md) {
+    font-size: 20px;
+  }
+  @include fsize(lg) {
+    font-size: 34px;
+  }
+
+}
+.promo_estudiantes {
+  width: 100%;
+  
+}
+
+/* Media Query Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main_header {
+    &_logo a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &_nav {
+      padding-top: 10px;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+  }
+
+  .main_maspedidos {
+    gap: 15px;
+    &_title {
+      display: flex;
+      flex-direction: column;
+      font-size: 8px;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
+      padding: 1rem;
+      h2 {
+        padding-top: 20px;
+        font-size: 26px;
+      }
+    }
+    &_box {
+      width: 75%;
+      justify-self: center;
+    }
+  }
+
+  .masproductos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+}
+/* Media Query Desktop */
+@media (min-width: 1024px) {
+  .main_header {
+    z-index: 3;
+    width: 100%;
+    position: fixed;
+  }
+  .main_img {
+    width: 100%;
+  }
+  .main_maspedidos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: space-evenly;
+    gap: 1rem;
+    padding: 1rem;
+    &_title {
+      display: grid;
+      justify-content: center;
+      padding-top: 30px;
+      width: 100%;
+      height: 100px;
+      h1 {
+        font-size: 30px;
+      }
+    }
+    &_box {
+      background-color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1rem;
+      &:hover {
+        @include box-shadow(2);
+        transform: scale(1.1);
+        border-radius: 5px;
+      }
+    }
+    &_cam {
+      transition: all 0.5s;
+      width: 80%;
+    }
+  }
+  .masproductos {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+  }
+
+  .arribos_oferta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "nuevos_arribos oferta_del_mes"
+      "promo_estudiantes promo_estudiantes";
+    padding-top: 50px;
+    padding-bottom: 20px;
+    justify-items: center;
+    gap: 20px 10px;
+  }
+  .card-img { 
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .nuevos_arribos {
+    @include box-shadow(2);
+    grid-area: nuevos_arribos;
+    display: grid;
+    grid-template-rows: 1fr 0,5fr;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    background: rgb(64, 50, 49);
+    background: linear-gradient(
+      0deg,
+      rgba(64, 50, 49, 1) 16%,
+      rgba(126, 75, 77, 1) 54%
+    );
+    animation-name: Movimiento;
+    animation-iteration-count: unset;
+    animation-timing-function: cubic-bezier();
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    @keyframes Movimiento {
+      0% {
+        transform: translate(-700px);
+      }
+      100% {
+        transform: translate(0px);
+      }
+    }
+  }
+
+  .oferta_del_mes {
+    @include box-shadow(2);
+    grid-area: oferta_del_mes;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    background: rgb(64, 50, 49);
+    background: linear-gradient(
+      0deg,
+      rgba(64, 50, 49, 1) 16%,
+      rgba(126, 75, 77, 1) 54%
+    );
+    animation-name: Movimiento2;
+    animation-iteration-count: unset;
+    animation-timing-function: cubic-bezier();
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    @keyframes Movimiento2 {
+      0% {
+        transform: translate(700px);
+      }
+      100% {
+        transform: translate(0px);
+      }
+    }
+  }
+  .promo_estudiantes {
+
+    @include box-shadow(2);
+    grid-area: promo_estudiantes;
+    animation-name: Movimiento3;
+    animation-iteration-count: unset;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    @keyframes Movimiento3 {
+      0% {
+        transform: scale(0%);
+      }
+      100% {
+        transform: scale(100%);
+      }
+    }
+  }
+  .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      font-size: 50px;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+/* Mobile */
+
+.sumate_trabaja {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  h1 {
+    font-size: 18px;
+    text-decoration: underline;
+  }
+  &_p {
+    padding-top: 15px;
+    margin: 0 auto;
+    align-items: center;
+    width: 80%;
+    @include fsize(sm) {
+      font-size: 16px;
+    }
+    @include fsize(md) {
+      font-size: 18px;
+    }
+    @include fsize(lg) {
+      font-size: 20px;
+    }
+  }
+}
+.sumate_forms {
+  width: 100%;
+
+  &_inputs {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+  &_inputs_box {
+    margin: 0 auto;
+    font-size: 16px;
+    width: 300px;
+    height: 30px;
+  }
+  &_sexo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 40px;
+    font-size: 16px;
+  }
+  &_contenedor {
+    display: flex;
+    justify-content: center;
+  }
+  &_acepta {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 12px;
+  }
+  &_enviar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+    padding-top: 15px;
+  }
+  &_checkbox {
+    width: 8%;
+  }
+}
+.sumate_textarea {
+  width: 80%;
+  height: 120px;
+}
+.sumate_labels_and_inputs {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+.sumate_forms_img {
+  width: 100%;
+}
+.sumate_forms_img_container {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Media Query Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sumate_trabaja {
+    h1 {
+      font-size: 20px;
+      text-decoration: underline;
+    }
+  }
+  .sumate_textarea {
+    width: 60%;
+    height: 120px;
+  }
+}
+
+/* Media Query Desktop */
+@media (min-width: 1024px) {
+  .sumate {
+    &_trabaja {
+      padding-top: 80px;
+      height: 200px;
+    }
+    &_trabaja_p {
+      padding-top: 0px;
+    }
+    &_forms {
+      align-items: center;
+      height: 100%;
+      &_inputs_box {
+        width: 300px;
+        height: 30px;
+        margin: 0 auto;
+      }
+    }
+
+    &_textarea {
+      width: 660px;
+      height: 120px;
+    }
+    &_forms_acepta {
+      padding-top: 10px;
+    }
+    &_forms_checkbox {
+      width: 3%;
+    }
+    h1 {
+      font-size: 24px;
+      text-decoration: underline;
+    }
+  }
+  .sumate_forms_img {
+    width: 100%;
+  }
+  .sumate_forms_img_container {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    padding: 3rem;
+  }
+  .sumate_labels_and_inputs {
+    display: flex;
+    gap: 2rem;
+  }
+
+}
